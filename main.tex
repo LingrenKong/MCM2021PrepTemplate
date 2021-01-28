@@ -3,7 +3,7 @@
 
 %%前面那个如果实际操作，完全不含中文可以用pdflatex引擎，注释有utf8没问题，但是正文要小心打出中文符号来。
 \documentclass{mcmthesis} %文档类
-
+\usepackage{float} %用于强行定位浮动体，参数H
 \mcmsetup{CTeX = false,   % 不使用 CTeX 套装时
         tcn = 0000,  %此为团队码
         problem = A, %问题号
@@ -36,7 +36,7 @@
 
 \section{Section1}
 
-this is sec1 $\beta_1^2 $
+this is sec1 $\beta_1^2 $ 
 
 \begin{thebibliography}{99} %引用部分
     \bibitem{1} D.~E. KNUTH   The \TeX{}book  the American
