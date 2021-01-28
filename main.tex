@@ -1,0 +1,54 @@
+% !TEX program = pdflatex
+% !TEX encoding = utf8
+
+%%前面那个如果实际操作，完全不含中文可以用pdflatex引擎，注释有utf8没问题，但是正文要小心打出中文符号来。
+\documentclass{mcmthesis} %文档类
+
+\mcmsetup{CTeX = false,   % 不使用 CTeX 套装时
+        tcn = 0000,  %此为团队码
+        problem = A, %问题号
+        sheet = true, %
+        titleinsheet = true, %
+        keywordsinsheet = true,%要关键字
+        titlepage = false, %不要这个title
+        abstract = true %启用摘要
+}
+
+\usepackage{newtxtext} %可以优化数学字体（模板案例也这样来用了）
+
+\title{The \LaTeX{} Template for MCM Version \MCMversion, Preparing!} %标题名称Version \MCMversion
+
+
+
+\begin{document} %开始正文
+
+\begin{abstract} %此为摘要环境
+    abstract here
+
+\begin{keywords} %关键词
+    keyword1; keyword2
+\end{keywords}
+
+\end{abstract}
+\maketitle 
+
+%（这个文档类仍然需要\maketitle）
+
+\section{Section1}
+
+this is sec1 $\beta_1^2 $
+
+\begin{thebibliography}{99} %引用部分
+    \bibitem{1} D.~E. KNUTH   The \TeX{}book  the American
+    Mathematical Society and Addison-Wesley
+    Publishing Company , 1984-1986.
+    \bibitem{2}Lamport, Leslie,  \LaTeX{}: `` A Document Preparation System '',
+    Addison-Wesley Publishing Company, 1986.
+    \bibitem{3}\url{https://www.latexstudio.net/}
+\end{thebibliography}
+    
+\begin{appendices} %附录部分
+    \section{The prefix(Appendix A) is default}
+\end{appendices}
+
+\end{document}
