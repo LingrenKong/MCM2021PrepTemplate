@@ -30,9 +30,12 @@
 \end{keywords}
 
 \end{abstract}
-\maketitle 
+\maketitle %（这个文档类仍然需要\maketitle） 
 
-%（这个文档类仍然需要\maketitle）
+\tableofcontents
+
+\newpage %目录页后面需要手动换页一下
+
 
 \section{Section1}
 
@@ -48,12 +51,22 @@ this is sec1
 	\item B
 \end{itemize}
 
+%插入一张图片-png（SVG是不可以的，但是可以转化为png）
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale = .35]{images/try-png.png}
+	\caption{stars png figure}
+	\label{fig:fig0} %在设计label时候利用前缀方便启发关键字搜索
+\end{figure}
+
+
+
 %插入一张图片
 \begin{figure}[ht]
 \centering
-\includegraphics[scale = .35]{/images/hammer.jpg}
+\includegraphics[scale = .35]{images/hammer.jpg}
 \caption{This is a hammer.}
-\label{fugure 1}
+\label{fig:fig1} %在设计label时候利用前缀方便启发关键字搜索
 \end{figure}
 
 %并排插入两张图片
@@ -61,15 +74,15 @@ this is sec1
 	\centering
 	\begin{minipage}[ht]{0.48\textwidth}
 		\centering
-		\includegraphics[width=6cm]{/images/ballons}
-		\label{fig_22}
+		\includegraphics[width=6cm]{images/ballons}%不含扩展名称也是可以识别的
+		\label{fig:fig_22}
 		\caption{ballons}
 	\end{minipage}
 	\begin{minipage}[ht]{0.48\textwidth}
 		\centering
-		\includegraphics[width=6cm]{/images/lemon}
+		\includegraphics[width=6cm]{images/lemon}
 		\caption{lemon}
-		\label{fig_23}
+		\label{fig:fig_23}
 	\end{minipage}
 \end{figure}
 
